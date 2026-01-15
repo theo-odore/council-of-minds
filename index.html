@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Council of Philosophers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <button id="new-chat-btn">
+                <span>+</span> New Chat
+            </button>
+            <div id="session-list" class="session-list">
+                <!-- Sessions injected here -->
+            </div>
+        </aside>
+
+        <!-- Main Content Wrapper -->
+        <div class="main-content-wrapper">
+            <header>
+                <h1>Council of Philosophers</h1>
+            </header>
+
+            <main>
+                <div class="council-chamber">
+                    <div class="table-surface">
+                        <div class="center-piece">
+                            <div class="glow"></div>
+                        </div>
+                    </div>
+
+                    <!-- Council Members will be injected here by JS -->
+                    <div id="council-members" class="members-container"></div>
+                </div>
+
+                <div class="chat-interface">
+                    <div id="chat-history" class="chat-history">
+                        <div class="system-message">The Council updates its records... Establish a connection to the
+                            local mind (Ollama).</div>
+                    </div>
+                    <div class="input-area">
+                        <input type="text" id="chairman-input" placeholder="Present your query to the council..."
+                            autocomplete="off">
+                        <button id="send-btn">Enter</button>
+                    </div>
+                    <!-- Configuration Modal -->
+                    <div id="config-modal" class="modal hidden">
+                        <div class="modal-content">
+                            <h3>Council Settings</h3>
+                            <label>
+                                <button id="settings-btn" title="Council Settings">⚙️</button>
+                                <input type="text" id="chairman-input" placeholder="Address the council..."
+                                    autocomplete="off">
+                                <button id="send-btn">SPEAK</button>
+                        </div>
+                    </div>
+            </main>
+        </div> <!-- End main-content-wrapper -->
+    </div>
+
+    <!-- Council Settings Modal -->
+    <div id="settings-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Council Settings</h2>
+            <div id="model-config-list">
+                <!-- Injected via JS -->
+            </div>
+            <div class="modal-actions">
+                <button id="close-settings-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

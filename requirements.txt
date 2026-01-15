@@ -1,0 +1,10 @@
+flask
+requests
+flask-cors
+
+# Required Ollama Models (Run these commands in your terminal)
+# ollama pull llama3.2
+# ollama pull mistral
+# ollama pull qwen
+# ollama pull phi
+# ollama pull gemma
